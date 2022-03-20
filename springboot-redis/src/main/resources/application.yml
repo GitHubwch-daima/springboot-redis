@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: spring-redis
+  redis:
+    host: 121.40.236.249
+    port: 6379
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://121.40.236.249:3306/redis?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8
+    username: root
+    password: 123456
+mybatis-plus:
+  type-aliases-package: com.azure.pojo #实体类所在的包
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名（这里实体类名和表名不一致时用）
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
